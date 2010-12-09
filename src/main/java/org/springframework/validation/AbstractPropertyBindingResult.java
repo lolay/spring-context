@@ -17,6 +17,7 @@
 package org.springframework.validation;
 
 import java.beans.PropertyEditor;
+import java.security.AccessControlException;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.ConfigurablePropertyAccessor;
@@ -107,7 +108,11 @@ public abstract class AbstractPropertyBindingResult extends AbstractBindingResul
 		Class targetType = getPropertyAccessor().getPropertyType(fixedField);
 		PropertyEditor editor = getPropertyAccessor().findCustomEditor(targetType, fixedField);
 		if (editor == null) {
-			editor = BeanUtils.findEditorByConvention(targetType);
+			try {
+				editor = BeanUtils.findEditorByConvention(targetType);
+			} catch (AccessControlException e) {
+				// do nothing (i.e. keep as null)
+			}
 		}
 		return editor;
 	}
