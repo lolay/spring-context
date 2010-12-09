@@ -23,7 +23,7 @@
 	<artifactId>spring-context-lolay</artifactId>
 	<packaging>jar</packaging>
 	<name>Lolay Spring Context</name>
-	<version>2.5.6.SEC02-1</version>
+	<version>2.5.6.SEC02-2-SNAPSHOT</version>
 
 	<scm>
 		<connection>scm:git:git://github.com/lolay/spring-context.git</connection>
