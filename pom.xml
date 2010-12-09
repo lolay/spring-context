@@ -89,26 +89,71 @@
 			<version>2.5.6.SEC02</version>
 			<scope>provided</scope>
 		</dependency>
-<!--
 		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib-nodep</artifactId>
-			<version>2.1_3</version>
-			<optional>true</optional>
+			<groupId>aopalliance</groupId>
+			<artifactId>aopalliance</artifactId>
+			<version>1.0</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>2.5.6.SEC02</version>
-			<scope>compile</scope>
+			<groupId>backport-util-concurrent</groupId>
+			<artifactId>backport-util-concurrent</artifactId>
+			<version>3.0</version>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
 			<version>1.1.1</version>
-			<scope>compile</scope>
+		</dependency>
+<!--
+		<dependency>
+			<groupId>com.bea.wlplatform</groupId>
+			<artifactId>commonj-twm</artifactId>
+			<version>1.1</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb</artifactId>
+			<version>3.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>jms</artifactId>
+			<version>1.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml</groupId>
+			<artifactId>jaxrpc-api</artifactId>
+			<version>1.1</version>
+			<scope>provided</scope>
 		</dependency>
 -->
+<!-- Spring Dependencies -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>spring-agent</artifactId>
+			<version>2.5.6.SEC02</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>2.5.6.SEC02</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>2.5.6.SEC02</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>2.5.6.SEC02</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
